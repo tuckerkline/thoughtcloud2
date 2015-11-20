@@ -1,0 +1,11 @@
+<ul ng-repeat = "thought in thoughts">
+<li> <h2>{{thought.thought}}</h2> </li>
+<form class = 'mainForm' ng-submit = 'addComment(thought)'>
+<h4>Comments</h4>
+<ul ng-repeat = "comment in thought.comments">
+<li> {{comment}} </li>
+</ul>
+<div class= 'form-group'>
+<textarea class = 'form-control' placeholder = 'Add your comment to this thought' ng-model = "thought.addedComment"></textarea>
+<input class = 'btn btn-default' type = 'submit'>
+</ul>
